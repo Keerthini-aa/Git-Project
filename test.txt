@@ -17,3 +17,65 @@
    "campaignCode":"CMP-01128-H1Y1M",
    "campaignName":"Pre-Reservation Request for Info BMWi",
    "bookingAmount":null,
+
+<xs:simpleType name="ProductLevelType">
+        <xs:annotation>
+            <xs:documentation>The level that defines what level of the model tree to use for lookup
+                of a product. The level is explicitly required if identical product IDs are used on
+                level 4 and level 5 of the model tree. In all other cases the level needs not to be
+                specified.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CATEGORY"/>
+            <xs:enumeration value="BRAND"/>
+            <xs:enumeration value="SERIES"/>
+            <xs:enumeration value="BODY"/>
+            <xs:enumeration value="AG_MODEL"/>
+            <xs:enumeration value="VG_MODEL"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="DMSHeaderType">
+        <xs:annotation>
+            <xs:documentation>CARMEN XML Message Header (DMS)</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element form="qualified" name="Sender" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>"Carmen" for export to DMS, "DMS" for import from
+                        DMS.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element form="qualified" name="Receiver" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>"Carmen" for import to DMS, "DMS" for export from
+                        DMS.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element form="qualified" minOccurs="0" name="Source" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The source system of the delivered data. This data is used as
+                        "SOURCE" parameter for parametrizable configurazion
+                        settings.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element form="qualified" name="TimeStamp" type="xs:string"/>
+            <xs:element form="qualified" minOccurs="0" name="Id" type="String25"/>
+            <xs:element form="qualified" minOccurs="0" name="MessageType" type="xs:string"/>
+            <xs:element form="qualified" name="CountryCode" type="String10">
+                <xs:annotation>
+                    <xs:documentation>Market/Organization mapped to char-2 ISO code, e.g.
+                        "NL"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element form="qualified" name="SchemaVersion" type="DMSSchemaVersion" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The schema version that is the base for the document. Only
+                        supported versions are allowed.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			 <xs:element form="qualified" minOccurs="0" name="FileName" type="xs:string"/>
+			  <xs:element form="qualified" minOccurs="0" name="ParentInterfaceRunId" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="DMSSchemaVersion">
+        <xs:annotation>

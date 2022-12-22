@@ -1,1 +1,94 @@
 new data in file
+
+ <xs:complexType name="Vehicle">
+        <xs:sequence>
+            <xs:element name="MigrationID" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="Name" type="String100" minOccurs="0"/>
+            <xs:element name="Brand" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="Series" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="LikeClass" type="LikeClassType" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="Model" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="BMWGroupBrand" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="ECode" type="String100" minOccurs="0"/>
+            <xs:element name="Type" type="TypeList" minOccurs="0"/>
+            <xs:element name="Segment" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleClassification" type="String100" minOccurs="0"/>
+            <xs:element name="VGModelCode" type="String100" minOccurs="0"/>
+            <xs:element name="WCPStatus" type="WCPStatusType" minOccurs="0"/>
+            <xs:element name="DOMUpdate" type="String100" minOccurs="0"/>
+            <xs:element name="DOMOptionsUpdate" type="String100" minOccurs="0"/>
+            <xs:element name="ProductionSeries" type="String100" minOccurs="0"/>
+            <xs:element name="AGModelCode" type="String100" minOccurs="0"/>
+            <xs:element name="ProductionDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="DateOfLastService" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="VehicleStatus" type="VehicleStatusType" minOccurs="0"/>   
+            <xs:element name="Mileage" type="String100" minOccurs="0"/>
+            <xs:element name="FirstRegistrationDate" type="SimpleDateCarmen" maxOccurs="1"
+                minOccurs="0"/>
+            <xs:element name="DirectImport" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="VIN" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="VIN17" type="String100" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="WarrentyStartDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="LicenseNumber" type="String100" minOccurs="0"/>
+            <xs:element name="WarrentyExpirationDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="WarrantyPlanCode" type="String100" minOccurs="0"/>
+            <xs:element name="LastInspectionDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="PlateRegion" type="String100" minOccurs="0"/>
+            <xs:element name="ExtendedWarrentyExpirationDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="UpcomingInspectionType" type="String100" minOccurs="0"/>
+            <xs:element name="ModelLongName" type="String100" minOccurs="0"/>
+            <xs:element name="ModelCommName" type="String100" minOccurs="0"/>
+            <xs:element name="UpcomingInspectionDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="ModelLabel" type="String100" minOccurs="0"/>
+            <xs:element name="SeriesLabel" type="String100" minOccurs="0"/>
+            <xs:element name="MarketCommName" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleSource" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleConfigurationID" type="String100" minOccurs="0"/>
+            <xs:element name="BodyTypeLabel" type="String100" minOccurs="0"/>
+            <xs:element name="ScrapDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="Cylinder" type="String100" minOccurs="0"/>
+            <xs:element name="Language" type="String100" minOccurs="0"/>
+            <xs:element name="LongVIN" type="String100" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="DeliveryDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="EngineID" type="String100" minOccurs="0"/>
+            <xs:element name="CosyImageURL" type="String100" minOccurs="0"/>
+            <xs:element name="ConfiguratorDeepLink" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleConfigurationURL" type="String100" minOccurs="0"/>
+            <xs:element name="ServiceStartDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="ServiceEndDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="CosyBeautyShotURL" type="String100" minOccurs="0"/>
+            <xs:element name="RoadsideEndDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="RoadSideCode" type="String100" minOccurs="0"/>
+            <xs:element name="RoadsideStartDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="TDVehicleDisplayStartDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="TDVehicleFirstPossibleDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="TDVehicleLastPossibleDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="SalesDealer" type="String100" minOccurs="0"/>
+            <xs:element name="ServiceDealer" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleType" type="String100" minOccurs="0"/>
+            <xs:element name="Gear" type="String100" minOccurs="0"/>
+            <xs:element name="Charging" type="String100" minOccurs="0"/>
+            <xs:element name="BodyType" type="String100" minOccurs="0"/>
+            <xs:element name="Power" type="String100" minOccurs="0"/>
+            <xs:element name="CubicCapacity" type="String100" minOccurs="0"/>
+            <xs:element name="Colour" type="String100" minOccurs="0"/>
+			<xs:element name="StockNumber" type="String100" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Steering" type="String100" minOccurs="0"/>
+            <xs:element name="Engine" type="String100" minOccurs="0"/>
+            <xs:element name="DoorCount" type="String100" minOccurs="0"/>
+            <xs:element name="BasicType" type="String100" minOccurs="0"/>
+            <xs:element name="Uphoistery" type="String100" minOccurs="0"/>
+            <xs:element name="PowerTransmission" type="String100" minOccurs="0"/>
+			<xs:element name="Odometer" type="String100" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Year" type="String100" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Price" type="String100" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="TypeOfVehicle" type="VehicleCategory" maxOccurs="1" minOccurs="0"/>
+			<xs:element name="VehicleSold" type="String100" minOccurs="0" maxOccurs="1"/>
+            <xs:element form="qualified" name="VehicleOptions" maxOccurs="1"
+                minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="VehicleOption" type="VehicleOption"
+                            maxOccurs="unbounded" minOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
