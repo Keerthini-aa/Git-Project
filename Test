@@ -1,1 +1,27 @@
 This a test file
+
+ <xs:complexType name="VehicleDetail">
+        <xs:sequence>
+            <xs:element name="MigrationID" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleMigrationID" type="String100" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="VIN17" type="String100" minOccurs="0"/>
+            <xs:element name="VehicleOptionMigrationID" type="String100" minOccurs="0"/>
+            <xs:element name="EstimatedPackageExpiryDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="Type" type="VehicleDetailTypeList" minOccurs="0"/>
+            <xs:element name="Status" type="String100" minOccurs="0"/>
+            <xs:element name="Campaign" type="String100" minOccurs="0"/>
+            <xs:element name="ProductType" type="String100" minOccurs="0"/>
+            <xs:element name="StartDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="ExpiryDate" type="SimpleDateCarmen" minOccurs="0"/>
+            <xs:element name="BSITLCContractNo" type="String100" minOccurs="0"/>
+            <xs:element name="CertificateNumber" type="String100" minOccurs="0"/>
+            <xs:element name="MaximumCoverage" type="SimpleCurrencyValue" minOccurs="0"/>
+            <xs:element name="AlreadyPaidAmountofCoverage" type="SimpleCurrencyValue" minOccurs="0"/>
+            <xs:element name="ShakenPackageMembershipNo" type="String100" minOccurs="0"/>
+            <xs:element name="UseHistoryofShakenPackage" type="String100" minOccurs="0"/>
+            <xs:element name="ShakenPackageType" type="String100" minOccurs="0"/>
+            <xs:element name="DefectCode" type="String10" minOccurs="0"/>
+            <xs:element name="CampaignCode" type="String10" minOccurs="0"/>
+            <xs:element name="Mileage" type="xs:nonNegativeInteger" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
